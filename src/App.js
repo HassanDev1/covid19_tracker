@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import headImage from './assets/images/headImage.png';
 import './App.css';
+import CovidAPIContextProvider from './contexts/covid_api_context';
+import Home from './screens/home/home';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <img src={headImage} className="App-logo" alt="logo" />
+        <p style={{color:'black'}}>
+          Covid19 Tracker
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <CovidAPIContextProvider>
+      <Home/>
+      </CovidAPIContextProvider>
     </div>
   );
 }
