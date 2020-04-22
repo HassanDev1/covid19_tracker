@@ -1,5 +1,5 @@
 import React,{useContext} from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Bar,Line } from 'react-chartjs-2';
 import { ChartContext } from '../../contexts/chart_api';
 
 const LineChart = () => {
@@ -12,7 +12,7 @@ const LineChart = () => {
  
 
     const barChart = countries.length?(
-        <Bar 
+        <Line 
         width={650}
         height={700}
 
